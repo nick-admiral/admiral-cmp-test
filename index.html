@@ -11,24 +11,22 @@
 
     </head>
 <body>
+ <body>
     <h1>CMP Test Page</h1>
     <p>Just a place to test the CMP configs </p>
 
-    <div id="us-nat" style="min-height: 20px; font-weight: bold;"></div>
-    
-    <div id="status-box" style="padding: 20px; border: 1px solid #ccc; background: #f9f9f9; margin-top: 20px;">
-        <strong>Testing Status:</strong> <span id="reg-status">Checking Admiral Status...</span>
-    </div>
+    <div id="us-nat" style="min-height: 20px; font-weight: bold; color: blue;"></div>
 
     <script>
+        // Ensure the command queue is ready
         window.admiral = window.admiral || function() { (admiral.q = admiral.q || []).push(arguments); };
-        
-        // This log will tell us exactly what Admiral thinks of your location
-        window.admiral('on', 'cmp.init', function(data) {
-            console.log("Regulation detected:", data.regulation);
-            document.getElementById('reg-status').innerText = data.regulation ? 
-                "Active (" + data.regulation.toUpperCase() + ")" : 
-                "No Regulation Detected (Check Dashboard Targeting)";
+
+        // 2. The "Safety Trigger" 
+        // In case the auto-injection fails, clicking the area will still try to launch the CMP
+        document.getElementById('us-nat').addEventListener('click', function() {
+            if (window.admiral) {
+                window.admiral("show", "cmp.settings");
+            }
         });
     </script>
 </body>
