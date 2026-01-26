@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMP Test Page</title>
 
+    <script type="text/javascript">!(function(M,_name){M[_name]=M[_name]||function F(){(F.q=F.q||[]).push(arguments)},M[_name].v=M[_name].v||2,M[_name].s="1";!(function(M,F,o){M[decodeURI(decodeURI('%25%35%66%5f%25%361%64%6d%69%2572%25%36%31%25%36%63%255%66%67%256%35%257%34%2543on%257%33e%6e%257%34ForG%54M'))]=function(F){function K(M,o){F((function(M,F){const o=M&&M.purpose&&M.purpose.consents||{};return{adConsentGranted:F||!!o[1],adUserData:F||!!o[7],adPersonalization:F||!!o[3],analyticsConsentGranted:F||!!o[1],personalizationConsentGranted:F||!!o[5],functionalityConsentGranted:F||!1,securityConsentGranted:F||!0}})(M,!o))}M[_name](o,"cmp.loaded",(function(F){F&&F.tcData&&F.tcData.gdprApplies?(F.consentKnown&&K(F.tcData,!0),M[_name](o,"cmp.updated",(function(M){K(M.tcData,!0)}))):K({},!1)}))}})(window,0,"after");})(window,decodeURI(decodeURI('%2561%64m%69%2572a%25%36%63')));!(function(M,F,o,K){o=M.createElement(F),M=M.getElementsByTagName(F)[0],o.async=1,o.src="https://securityannex.net/chunks/m1abjr6z7rzximpjd.v1.js",(K=0)&&K(o),M.parentNode.insertBefore(o,M)})(document,"script");;</script>
+<script type="text/javascript">!(function(M,F,o,K,T){function d(K,T){try{d=M.localStorage,(K=JSON.parse(d[decodeURI(decodeURI('%67%25%365%257%34I%25%374%25%36%35%25%36%64'))](o)).lgk||[])&&(T=M[F].pubads())&&K.forEach((function(M){M&&M[0]&&T.setTargeting(M[0],M[1]||"")}))}catch(J){}var d}try{(T=M[F]=M[F]||{}).cmd=T.cmd||[],typeof T.pubads===K?d():typeof T.cmd.unshift===K?T.cmd.unshift(d):T.cmd.push(d)}catch(J){}})(window,decodeURI(decodeURI('%25%367%256%66%256f%67l%25%36%35%25%37%34%25%36%31g')),"_a"+decodeURI(decodeURI("Q%25%35%3302O%255%34c3%51%55%55%78%25%34%66%25%35%34B%25%343%4f%54%4e%46%2551%6a%2541%33%25%34%65%25%37%61%254%35%25%334%52j%25%355%257%61%2551%6a%41%74%254d%2551")),"function");;</script>
+<script type="text/javascript">;!(function(M,F,o,K,T){function d(){for(var M=[],o=0;o<arguments.length;o++)M.push(arguments[o]);if(!M.length)return T;"ping"===M[0]?M[2]({gdprAppliesGlobally:!!F[decodeURI(decodeURI('_%25%35%66%25%363%25%36%64%70G%64pr%25%34%31%25%370%2570liesG%6c%6f%62a%256%63%25%36c%79'))],cmpLoaded:!1,cmpStatus:"stub"}):M.length>0&&T.push(M)}function J(M){if(M&&M.data&&M.source){var K,T=M.source,d="__tcfapiCall",J="string"==typeof M.data&&M.data.indexOf(d)>=0;(K=J?((function(M){try{return JSON.parse(M)}catch(F){}})(M.data)||{})[d]:(M.data||{})[d])&&F[o](K.command,K.version,(function(M,F){var o={__tcfapiReturn:{returnValue:M,success:F,callId:K.callId}};T&&T.postMessage(J?JSON.stringify(o):o,"*")}),K.parameter)}}!(function H(){if(!F.frames[K]){var o=M.body;if(o){var T=M.createElement("iframe");T.style.display="none",T.name=K,o.appendChild(T)}else F.setTimeout(H,5)}})(),d.v=1,"function"!=typeof F[o]&&(F[o]=F[o]||d,F.addEventListener?F.addEventListener("message",J,!1):F.attachEvent&&F.attachEvent("onmessage",J))})(document,window,"__tcfapi","__tcfapiLocator",[]);;;!(function(M,F,o,K,T,d,J,H,x,Z,X){function C(){for(var M=[],F=arguments.length,o=0;o<F;o++)M.push(arguments[o]);var K,T=M[1],d=typeof T===J,H=M[2],C={gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:["7:usnat"].reduce((function(M,F){return F&&M.push(F),M}),[]),cmpId:9,sectionList:[],applicableSections:[0],gppString:"",parsedSections:{}};function u(M){d&&T(M,!0)}switch(M[0]){case"ping":return u(C);case"queue":return x;case"events":return Z;case"addEventListener":return d&&(K=++X,Z.push({id:K,callback:T,parameter:H})),u({eventName:"listenerRegistered",listenerId:K,data:!0,pingData:C});case"removeEventListener":for(K=!1,o=0;o<Z.length;o++)if(Z[o].id===H){Z.splice(o,1),K=!0;break}return u(K);case"hasSection":case"getSection":case"getField":return u(null);default:return void x.push(M)}}C.v=2,typeof F[o]!==J&&(F[o]=F[o]||C,F[H]&&F[H]("message",(function(M,K){var J="string"==typeof M.data;(K=J?((function(M){try{return JSON.parse(M)}catch(F){}})(M.data)||{})[T]:(M.data||{})[T])&&F[o](K.command,(function(F,o){var T={__gppReturn:{returnValue:F,success:o,callId:K.callId}};M.source.postMessage(J?JSON.stringify(T):T,"*")}),d in K?K[d]:null,K.version||1)}),!1),(function u(){if(!F.frames[K]){var o=M.body;if(o){var T=M.createElement("iframe");T.style.display="none",T.name=K,o.appendChild(T)}else F.setTimeout(u,5)}})())})(document,window,"__gpp","__gppLocator","__gppCall","parameter","function","addEventListener",[],[],0);</script>
+
     </head>
 <body>
     <h1>CMP Test Page</h1>
@@ -15,5 +19,26 @@
     <div id="status-box" style="padding: 20px; border: 1px solid #ccc; background: #f9f9f9;">
         <strong>Testing Status:</strong> Ad-blocker detection active...
     </div>
+    <script>
+        // 1. Wait for the page to load
+        document.addEventListener("DOMContentLoaded", function() {
+            var privacyLink = document.getElementById('us-nat');
+    
+            // 2. Make it look like a clickable link
+            privacyLink.style.cursor = 'pointer';
+            privacyLink.style.color = 'blue';
+            privacyLink.style.textDecoration = 'underline';
+    
+            // 3. Trigger Admiral on click
+            privacyLink.addEventListener('click', function() {
+                if (window.admiral) {
+                    // This is the specific Admiral command to launch the CMP
+                    window.admiral("show", "cmp.settings");
+                } else {
+                    console.error("Admiral is not loaded yet.");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
