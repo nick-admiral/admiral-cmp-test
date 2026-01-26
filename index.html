@@ -14,25 +14,16 @@
     <h1>CMP Test Page</h1>
     <p>Just a place to test the CMP configs </p>
 
-    <div id="us-nat">Privacy Settings</div>
-    
-    <div id="status-box" style="padding: 20px; border: 1px solid #ccc; background: #f9f9f9;">
-        <strong>Testing Status:</strong> Ad-blocker detection active...
-    </div>
+    <div id="us-nat"></div>
+
     <script>
-        // 1. Wait for the page to load
         document.addEventListener("DOMContentLoaded", function() {
             var privacyLink = document.getElementById('us-nat');
-    
-            // 2. Make it look like a clickable link
             privacyLink.style.cursor = 'pointer';
             privacyLink.style.color = 'blue';
             privacyLink.style.textDecoration = 'underline';
-    
-            // 3. Trigger Admiral on click
             privacyLink.addEventListener('click', function() {
                 if (window.admiral) {
-                    // This is the specific Admiral command to launch the CMP
                     window.admiral("show", "cmp.settings");
                 } else {
                     console.error("Admiral is not loaded yet.");
