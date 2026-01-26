@@ -31,5 +31,27 @@
             });
         });
     </script>
+
+<script>
+    window.admiral = window.admiral || function() { (admiral.q = admiral.q || []).push(arguments); };
+
+    // This waits for Admiral to finish its Geo-IP check
+    window.admiral('on', 'cmp.init', function(data) {
+        console.log("Admiral Geo-Detection complete. Regulation:", data.regulation);
+        
+        var privacyLink = document.getElementById('us-nat');
+        
+        // Only show or enable the link if a regulation actually applies
+        if (data.regulation) {
+            privacyLink.style.display = 'block';
+            privacyLink.style.cursor = 'pointer';
+        }
+    });
+
+    document.getElementById('us-nat').addEventListener('click', function() {
+        // Admiral will automatically show the correct UI based on the detected Geo
+        window.admiral("show", "cmp.settings");
+    });
+</script>
 </body>
 </html>
