@@ -9,6 +9,8 @@
 <body>
     <h1>CMP Test Page</h1>
     <p>Just a place to test the CMP configs </p>
+
+    <div id="us-nat">Privacy Settings</div>
     
     <div id="status-box" style="padding: 20px; border: 1px solid #ccc; background: #f9f9f9;">
         <strong>Testing Status:</strong> Ad-blocker detection active...
