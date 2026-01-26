@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMP Test Page</title>
+
+    </head>
+<body>
+    <h1>CMP Test Page</h1>
+    <p>Just a place to test the CMP configs </p>
+    
+    <div id="status-box" style="padding: 20px; border: 1px solid #ccc; background: #f9f9f9;">
+        <strong>Testing Status:</strong> Ad-blocker detection active...
+    </div>
+</body>
+</html>
