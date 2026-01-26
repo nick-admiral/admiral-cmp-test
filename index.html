@@ -11,18 +11,16 @@
 
     </head>
 <body>
- <body>
     <h1>CMP Test Page</h1>
     <p>Just a place to test the CMP configs </p>
 
-    <div id="us-nat" style="min-height: 20px; font-weight: bold; color: blue;"></div>
+    <div id="us-nat"></div>
 
     <script>
-        // Ensure the command queue is ready
+        // Ensure the Admiral command queue is active
         window.admiral = window.admiral || function() { (admiral.q = admiral.q || []).push(arguments); };
 
-        // 2. The "Safety Trigger" 
-        // In case the auto-injection fails, clicking the area will still try to launch the CMP
+        // 2. Simple binding to ensure the link opens the CMP if clicked
         document.getElementById('us-nat').addEventListener('click', function() {
             if (window.admiral) {
                 window.admiral("show", "cmp.settings");
