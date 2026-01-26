@@ -11,53 +11,25 @@
 
     </head>
 <body>
-        <h1>CMP Test Page</h1>
-        <p>Just a place to test the CMP configs </p>
+    <h1>CMP Test Page</h1>
+    <p>Just a place to test the CMP configs </p>
+
+    <div id="us-nat" style="min-height: 20px; font-weight: bold;"></div>
     
-        <div id="us-nat" style="display: none; cursor: pointer; color: blue; text-decoration: underline; margin-bottom: 20px;">
-            Privacy Settings
-        </div>
+    <div id="status-box" style="padding: 20px; border: 1px solid #ccc; background: #f9f9f9; margin-top: 20px;">
+        <strong>Testing Status:</strong> <span id="reg-status">Checking Admiral Status...</span>
+    </div>
+
+    <script>
+        window.admiral = window.admiral || function() { (admiral.q = admiral.q || []).push(arguments); };
         
-        <div id="status-box" style="padding: 20px; border: 1px solid #ccc; background: #f9f9f9;">
-            <strong>Testing Status:</strong> <span id="reg-status">Detecting region...</span>
-        </div>
-    
-        <script>
-            // Ensure the Admiral queue exists
-            window.admiral = window.admiral || function() { (admiral.q = admiral.q || []).push(arguments); };
-    
-            function handleCmpInit(data) {
-                var privacyLink = document.getElementById('us-nat');
-                var statusText = document.getElementById('reg-status');
-                
-                console.log("Admiral initialized. Regulation:", data.regulation);
-    
-                if (data.regulation) {
-                    // Regulation detected (e.g., 'gpp' or 'tcf')
-                    privacyLink.style.display = 'block';
-                    statusText.innerText = "Active (" + data.regulation.toUpperCase() + ")";
-                } else {
-                    // No regulation applies to this IP
-                    statusText.innerText = "No Regulation Detected for your IP.";
-                }
-            }
-    
-            // 1. Listen for the initialization event
-            window.admiral('on', 'cmp.init', handleCmpInit);
-    
-            // 2. Immediate check in case Admiral finished before this script loaded
-            window.admiral((admiralInstance) => {
-                if (admiralInstance && admiralInstance.cmp && admiralInstance.cmp.status) {
-                    handleCmpInit({ regulation: admiralInstance.cmp.status.regulation });
-                }
-            });
-    
-            // 3. Setup the click trigger for the link
-            document.getElementById('us-nat').addEventListener('click', function() {
-                if (window.admiral) {
-                    window.admiral("show", "cmp.settings");
-                }
-            });
-        </script>
+        // This log will tell us exactly what Admiral thinks of your location
+        window.admiral('on', 'cmp.init', function(data) {
+            console.log("Regulation detected:", data.regulation);
+            document.getElementById('reg-status').innerText = data.regulation ? 
+                "Active (" + data.regulation.toUpperCase() + ")" : 
+                "No Regulation Detected (Check Dashboard Targeting)";
+        });
+    </script>
 </body>
 </html>
